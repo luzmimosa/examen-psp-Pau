@@ -6,7 +6,7 @@ const {ApplicationName} = require("../StartServer");
 router.get('/clientes', (req, res) => {
 
     res.render('clientes/clientes_index', {
-        title: 'Inicio | ' + ApplicationName
+        title: 'Clientes | ' + ApplicationName
     })
 });
 
@@ -15,7 +15,7 @@ router.get('/clientes/listado', async (req, res) => {
     let clientList = await database.getClientes()
 
     res.render('clientes/clientes_listado', {
-        title: 'Inicio | ' + ApplicationName,
+        title: 'Listado de clientes | ' + ApplicationName,
         clientes: clientList
     });
 });
@@ -26,7 +26,7 @@ router.get('/clientes/alta', (req, res) => {
         error = req.query.fallo;
     }
     res.render('clientes/clientes_alta', {
-        title: 'Inicio | ' + ApplicationName,
+        title: 'Alta de cliente | ' + ApplicationName,
         error: error
     })
 })
