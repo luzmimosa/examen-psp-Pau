@@ -1,3 +1,132 @@
+:root {
+    --color-primary: #751944;
+    --color-secondary: #753C57;
+    --color-tertiary: #C22970;
+    --color-quaternary: #F6348E;
+    --color-quinary: #F77EB6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Calibri', sans-serif;
+
+    transition: background-color 0.2s;
+    cursor: default;
+    user-select: none;
+
+    color: var(--color-primary);
+}
+
 body {
-    background-color: lightcoral;
+    background: linear-gradient(0deg, var(--color-tertiary) 0%, var(--color-quaternary) 100%);
+    background-attachment: fixed;
+}
+
+header {
+    padding: 3vh;
+    background-color: var(--color-primary);
+}
+
+header h1, header h3 {
+    font-family: 'Nirmala UI', sans-serif;
+    text-align: center;
+    color: var(--color-quinary);
+}
+
+
+nav {
+    background-color: var(--color-secondary);
+    padding: 1vh;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+
+nav button {
+    border: 0;
+    padding: 2vh;
+
+    margin: 1vh;
+    flex: 1 1 0;
+
+    max-width: 30%;
+    text-align: center;
+
+    background-color: var(--color-quaternary);
+
+    font-size: 1em;
+    color: var(--color-primary);
+
+    box-shadow: var(--color-primary) 0 0 20px 1px;
+}
+
+nav button:hover {
+    background-color: var(--color-quinary);
+    cursor: pointer;
+}
+
+#root {
+    border: 1px solid var(--color-quinary);
+    margin: 2vh auto 2vh auto;
+
+    width: 80%;
+
+    padding: 4vh;
+}
+
+#root * {
+    text-align: center;
+}
+
+h2 {
+    color: var(--color-primary);
+}
+
+li {
+    list-style-type: none;
+    margin: 1vh;
+    display: inline-block;
+}
+
+button, a {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-quinary);
+    background-color: var(--color-secondary);
+    padding: 0.5vh;
+    border-radius: 4px;
+
+    border-width: 0;
+}
+
+button:hover, a:hover {
+    background-color: var(--color-quaternary);
+    cursor: pointer;
+}
+
+input {
+    background-color: var(--color-secondary);
+    display: block;
+    margin: 0.5vh auto 2.5vh auto;
+    height: 5vh;
+    width: 40%;
+
+    color: var(--color-quinary);
+
+    border-width: 0;
+}
+
+img {
+    border-radius: 5px;
+    border: 1px solid var(--color-secondary);
+    box-shadow: var(--color-primary) 0 0 20px 1px;
 }

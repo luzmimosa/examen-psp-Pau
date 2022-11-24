@@ -7,9 +7,19 @@
     </head>
 
     <body>
-        <header style="background-color: palegreen">
-            <h2>Tienda bonita</h2>
+        <header>
+            <h1>{{title}}</h1>
+            <h3>{{application}}</h3>
         </header>
-        {{{body}}}
+        {{#if navbuttons}}
+            <nav>
+                {{#each navbuttons}}
+                    <button onclick="window.location.href='{{this.destination}}'">{{this.displayname}}</button>
+                {{/each}}
+            </nav>
+        {{/if}}
+        <div id="root">
+            {{{body}}}
+        </div>
     </body>
 </html>

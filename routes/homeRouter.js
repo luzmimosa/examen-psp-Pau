@@ -1,10 +1,12 @@
 const express = require('express');
-const {ApplicationName} = require("../StartServer");
 const router = express.Router();
+
+const appName = 'Todacién';
+
 
 router.get('/', (req, res) => {
     res.render('index', {
-        title: 'Inicio | ' + ApplicationName
+        title: appName
     });
 })
 

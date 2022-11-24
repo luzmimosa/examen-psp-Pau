@@ -1,12 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const database = require('../utils/Database');
-const {ApplicationName} = require("../StartServer");
+const buttons = require("../utils/Buttons");
+
+const appName = 'Todacién';
 
 router.get('/clientes', (req, res) => {
 
     res.render('clientes/clientes_index', {
-        title: 'Clientes | ' + ApplicationName
+        title: 'Clientes',
+        application: appName,
+        navbuttons: [
+            buttons.INICIO,
+            buttons.ARTICULOS
+        ]
     })
 });
 
@@ -15,7 +22,11 @@ router.get('/clientes/listado', async (req, res) => {
     let clientList = await database.getClientes()
 
     res.render('clientes/clientes_listado', {
-        title: 'Listado de clientes | ' + ApplicationName,
+        title: 'Listado de clientes',
+        application: appName,
+        navbuttons: [
+            buttons.CLIENTES
+        ],
         clientes: clientList
     });
 });
@@ -26,7 +37,11 @@ router.get('/clientes/alta', (req, res) => {
         error = req.query.fallo;
     }
     res.render('clientes/clientes_alta', {
-        title: 'Alta de cliente | ' + ApplicationName,
+        title: 'Alta de cliente',
+        application: appName,
+        navbuttons: [
+            buttons.CLIENTES
+        ],
         error: error
     })
 })
