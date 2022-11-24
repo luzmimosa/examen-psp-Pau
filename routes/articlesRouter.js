@@ -90,7 +90,7 @@ router.get('/articulos/eliminar/:id', async (req, res) => {
     }
 
     // eliminar de la database
-    //await database.removeArticulo(req.params.id);
+    await database.removeArticulo(req.params.id);
 
     res.redirect('/articulos');
 })
