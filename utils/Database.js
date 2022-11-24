@@ -75,12 +75,17 @@ async function getArticulo(id) {
 
 // Get user by id
 async function getCliente(id) {
-    Cliente.findById(id);
+    return Cliente.findById(id);
 }
 
 // Update article
-function updateArticulo(articulo) {
-    Articulo.updateOne({_id: articulo._id}, articulo)
+async function updateArticulo(id, articulo) {
+    await Articulo.findByIdAndUpdate(id, articulo);
+}
+
+// Remove article
+async function removeArticulo(id) {
+    await Articulo.findByIdAndDelete(id);
 }
 
 // export models and connect function
@@ -93,6 +98,8 @@ module.exports = {
     getArticulo,
     getArticulos,
     saveCliente,
-    saveArticulo
+    saveArticulo,
+    removeArticulo,
+    updateArticulo
 }
 
