@@ -3,6 +3,9 @@ const database = require('./utils/Database');
 
 const ApplicationName = 'Todacién';
 
+// Connect to database
+database.connect();
+
 
 // Import routers
 const homeRouter = require('./routes/homeRouter');
