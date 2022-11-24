@@ -1,0 +1,16 @@
+<button onclick="window.location.href='/articulos'">Listado de artículos</button>
+<h2>Alta de artículos</h2>
+<form action="/articulos/altaArticulo" method="POST" id="nuevoArticulo" enctype="multipart/form-data">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre" required>
+
+    <label for="precio">Precio</label>
+    <input type="number" name="precio" id="precio" required>
+
+    <label for="foto">Foto</label>
+    <input type="file" name="foto" id="foto" required accept="image/*">
+
+    <input type="submit" value="Alta">
+
+</form>

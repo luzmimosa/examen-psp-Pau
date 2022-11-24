@@ -1,0 +1,17 @@
+<button onclick="window.location.href='/'">Menú</button>
+<button onclick="window.location.href='/articulos/alta'">Alta de artículos</button>
+
+{{#if articulos}}
+
+<h2>Artículos disponibles</h2>
+<ul>
+    {{#each articulos}}
+        <li>
+            <a href="/articulos/{{this._id}}">{{this.nombre}}</a>
+        </li>
+    {{/each}}
+</ul>
+{{/if}}
+{{#unless articulos}}
+    <p>No hay artículos disponibles</p>
+{{/unless}}
