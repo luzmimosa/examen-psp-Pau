@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const databaseUrl = "mongodb://localhost"
+const databaseUrl = "mongodb://127.0.0.1"
 const databasePort = 27017;
 const databaseName = 'tienda';
 const url = `${databaseUrl}:${databasePort}/${databaseName}`;
