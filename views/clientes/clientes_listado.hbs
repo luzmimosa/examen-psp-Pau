@@ -1,0 +1,28 @@
+<button onclick="window.location.href='/clientes'">Clientes</button>
+
+<h2>Listado de clientes:</h2>
+{{#if clientes}}
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each clientes}}
+                <tr>
+                    <td><a href="tel:{{this.telefono}}">{{this.nombre}}</a></td>
+                    <td>{{this.telefono}}</td>
+                    <td>Cat: {{this.categoria}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{/if}}
+
+{{#unless clientes}}
+    <p>No hay clientes registrados</p>
+{{/unless}}

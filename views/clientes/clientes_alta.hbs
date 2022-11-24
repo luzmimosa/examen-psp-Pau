@@ -1,0 +1,19 @@
+<button onclick="window.location.href='/clientes'">Clientes</button>
+
+<h2>Alta de cliente</h2>
+<form method="get" action="/clientes/nuevoCliente" >
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre" required>
+
+    <label for="telefono">Teléfono</label>
+    <input type="tel" name="telefono" id="telefono" required>
+
+    <label for="categoria">Categoría</label>
+    <input type="number" name="categoria" min="1" max="5" value="1">
+
+    <input type="submit" value="Alta">
+
+    {{#if error}}
+        <script>alert("Ha habido un error: {{error}}")</script>
+    {{/if}}
+</form>
