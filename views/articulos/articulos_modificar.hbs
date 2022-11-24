@@ -1,0 +1,19 @@
+<button onclick="window.location.href='/articulos'">Listado de artículos</button>
+
+<h2>Modificar artículo</h2>
+<form action="/articulos/aplicarModificacion" method="post" id="modificarArticulo" enctype="multipart/form-data">
+
+    <input type="hidden" name="articleid" id="articleid" value="{{articulo._id}}">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre" value="{{articulo.nombre}}" required>
+
+    <label for="precio">Precio</label>
+    <input type="number" name="precio" id="precio" value="{{articulo.precio}}" required>
+
+    <label for="imagen">Imagen</label>
+    <input type="file" name="imagen" id="imagen" accept="image/*">
+
+    <input type="submit" value="Modificar">
+
+</form>
