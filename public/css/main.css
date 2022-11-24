@@ -125,6 +125,16 @@ input {
     border-width: 0;
 }
 
+input[type="submit"] {
+    background-color: var(--color-quaternary);
+    color: var(--color-primary);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-quinary);
+    cursor: pointer;
+}
+
 img {
     border-radius: 5px;
     border: 1px solid var(--color-secondary);
