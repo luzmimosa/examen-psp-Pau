@@ -1,7 +1,7 @@
 const express = require('express');
 const database = require('./utils/Database');
 
-const ApplicationName = () => 'Todacién';
+
 
 // Connect to database
 database.connect();
